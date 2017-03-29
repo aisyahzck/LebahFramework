@@ -1,0 +1,1 @@
+update users set user_password = '0DPiKuNIrrVmD8IUCuw1hQxNqZc=' where user_login = 'admin';

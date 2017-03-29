@@ -1,0 +1,2 @@
+DELETE FROM users;
+INSERT INTO users (user_login, user_password, user_name, user_role, user_login_alt, user_address, user_ip_address, date_registered, avatar)  VALUES ('admin', '0DPiKuNIrrVmD8IUCuw1hQxNqZc=', 'Administrator', 'root', '', '', '', '2007-09-01', '');

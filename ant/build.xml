@@ -1,0 +1,189 @@
+<project name="lebah" basedir="../" default="compile">
+
+	<!-- Project settings -->
+    <property name="project.distname" value="lebah4"/>
+	<property name="project.distname.shrink" value="0629-014"/>	
+
+    <!-- define your folder for deployment -->
+	<property name="deploy.educate" value="/usr/local/apache-tomcat-7.0.54/webapps/educate"/>
+
+
+    <!-- Local system paths --> 
+    <property file="${basedir}/ant/build.properties"/>
+    <property name="webroot.dir" value="${basedir}/WebContent"/>
+    <property name="webinf.dir" value="${webroot.dir}/WEB-INF"/>
+    <property name="build.dir" value="build"/>	 
+    <property name="java.home" value="/java"/>
+	
+	<path id="compile.classpath">
+	<pathelement location="${webinf.dir}/lib"/>
+    	<fileset dir="${webinf.dir}/lib">
+    	    <include name="**/*.jar"/>
+        </fileset>		
+	</path>		
+	
+
+    <!-- Check timestamp on files -->
+    <target name="prepare">
+        <tstamp/>
+    </target>
+
+    <!-- Copy any resource or configuration files -->
+    <target name="resources">
+        <copy todir="${webinf.dir}/classes" includeEmptyDirs="no">
+            <fileset dir="JavaSource">
+            <patternset>
+                <include name="**/*.conf"/>
+                <include name="**/*.properties"/>
+                <include name="**/*.xml"/>
+            </patternset>
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- Normal build of application -->
+    <target name="compile" depends="prepare,resources">
+        <javac srcdir="JavaSource" destdir="${webinf.dir}/classes">
+            <classpath refid="compile.classpath"/>
+        </javac>
+    </target>
+
+	<!-- Create JAR -->
+	
+	<target name="jar-create">
+  		<jar destfile="${build.dir}/${project.distname}.jar">
+            <fileset dir="${webinf.dir}/classes">
+            	<exclude name="**/*.svn"/>
+            	<exclude name="**/*.properties"/>
+            	<exclude name="**/*.xml"/>
+            </fileset>		
+  		</jar>
+	</target>	
+	
+	
+	
+	
+	<!-- proguard setting-->
+	<target name="jar-obfuscate" depends="jar-create">
+	  <taskdef resource="proguard/ant/task.properties"
+	           classpath="/Users/Admin/Documents/proguard5.2/lib/proguard.jar" />
+
+	  <proguard printseeds="on">
+
+	    <!-- Specify the input jars, output jars, and library jars. -->
+
+	    <injar  file="${build.dir}/${project.distname}.jar" />
+	    <outjar file="${build.dir}/${project.distname.shrink}.jar" />
+
+	    <libraryjar file="${java.home}/lib/rt.jar" />
+	  	<libraryjar file="${java.home}/lib/jce.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/jspsmart.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/jasperreports-1.0.1.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/velocity-1.7.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/servletapi-2.3.jar" /> 
+	  	<libraryjar file="${webinf.dir}/lib/portlet.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/mail-1.4.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/openjpa-1.2.1.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/commons-lang-2.1.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/commons-logging-1.1.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/commons-io-1.2.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/commons-fileupload-1.2.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/geronimo-jpa_3.0_spec-1.0.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/core-renderer.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/iText-2.0.8.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/itextpdf-5.1.2.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/jtidy-r938.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/dwr.jar" />
+	  	<libraryjar file="${webinf.dir}/lib/lebahlic.jar" />
+	  	
+	    <keep access="public">
+	      <field  access="public protected" />
+	      <method access="public protected" />
+	    </keep>	  	
+
+	    <!-- Preserve all annotations. -->
+	    <keepattribute name="*Annotation*" />
+	    
+	    <!-- Preserve the methods that are required in all enumeration classes. -->
+	    <keepclassmembers extends="java.lang.Enum">
+	      <method access="public static"
+	              type="**[]"
+	              name="values"
+	              parameters="" />
+	      <method access="public static"
+	              type="**"
+	              name="valueOf"
+	              parameters="java.lang.String" />
+	    </keepclassmembers>
+
+	   </proguard>
+	</target>	
+
+    <!-- Remove classes directory for clean build -->
+    <target name="clean"
+      description="Prepare for clean build">
+      <!--
+      <delete dir="${webinf.dir}/classes"/>
+      <mkdir  dir="${webinf.dir}/classes"/>
+      -->
+    </target>
+
+    <!-- Build entire project -->
+    <target name="build" depends="prepare,compile"/>
+    <target name="rebuild" depends="clean,prepare,compile"/>
+
+    <!-- Create binary distribution -->
+    <target name="war" depends="build">
+      <mkdir dir="${build.dir}"/>
+      <war
+        basedir="${webroot.dir}"
+        warfile="${build.dir}/${project.distname}.war"
+        webxml="${webinf.dir}/web.xml">
+        <exclude name="WEB-INF/${build.dir}/**"/>
+        <exclude name="WEB-INF/src/**"/>
+        <exclude name="WEB-INF/web.xml"/>
+       </war>
+    </target>
+
+    <target name="deploy" depends="war">
+       <delete file="${deploy.dir}/${project.distname}.war"/>
+       <delete dir="${deploy.dir}/${project.distname}"/>
+       <copy file="${build.dir}/${project.distname}.war" todir="${deploy.dir}"/>
+    </target>
+	
+    <target name="copy_to_educate" depends="jar-create">
+    	<!--
+        <copy todir="/Users/Admin/Documents/workspace1/educate4/WebContent" includeEmptyDirs="no">
+            <fileset dir="WebContent">
+            	<exclude name="**/*.svn"/>
+            	<exclude name="**/*.class"/>
+            	<exclude name="**/*.properties"/>   
+             	<exclude name="**/*.xml"/>	
+            </fileset>
+        </copy>   
+        
+        <echo message="copy lebah.jar to onapp2 workspace"/>
+       <copy file="${build.dir}/${project.distname}.jar" todir="/Users/Admin/Documents/workspace1/onapp2/WebContent/WEB-INF/lib"/>
+    	-->
+    	<echo message="copy lebah.jar to educate4 workspace"/>
+        <copy file="${build.dir}/${project.distname}.jar" todir="/Users/Admin/Documents/workspace1/educate4/WebContent/WEB-INF/lib"/>
+
+    	<echo message="copy lebah.jar to APPLEBAH workspace"/>
+    	<copy file="${build.dir}/${project.distname}.jar" todir="/Users/Admin/Documents/workspace1/AppLebah/WebContent/WEB-INF/lib"/>
+    	
+    	<echo message="copy lebah.jar to ejournal workspace"/>
+    	<copy file="${build.dir}/${project.distname}.jar" todir="/Users/Admin/Documents/workspace1/EJournal/WebContent/WEB-INF/lib"/>
+    	
+    	<echo message="copy lebah.jar to onapp2 workspace"/>
+    	<copy file="${build.dir}/${project.distname}.jar" todir="/Users/Admin/Documents/workspace1/onapp2/WebContent/WEB-INF/lib"/>
+    	
+    	<echo message="copy lebah.jar to tms workspace"/>
+    	<copy file="${build.dir}/${project.distname}.jar" todir="/Users/Admin/Documents/workspace1/tms/WebContent/WEB-INF/lib"/>
+
+    	<echo message="copy lebah.jar to tms workspace"/>
+    	<copy file="${build.dir}/${project.distname}.jar" todir="/Users/Admin/Documents/workspace-neon/at/WebContent/WEB-INF/lib"/>
+    </target>	
+	
+
+ 
+</project>

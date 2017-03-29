@@ -1,0 +1,39 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+ <persistence-unit name="lebahpersistence">
+ 	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+ 	
+ 	<class>lebah.entity.Forum</class>
+ 	<class>lebah.entity.ForumAttachment</class>
+ 	<class>lebah.entity.Guestbook</class>
+ 	<class>lebah.entity.Module</class>
+ 	<class>lebah.entity.ModuleHtmlContainer</class>
+ 	<class>lebah.entity.AttrModuleData</class>
+ 	<class>lebah.entity.PageCss</class>
+ 	<class>lebah.entity.Role</class>
+ 	<class>lebah.entity.RoleModule</class>
+ 	<class>lebah.entity.RssModule</class>
+ 	<class>lebah.entity.ShoutBox</class>
+ 	<class>lebah.entity.TabTemplate</class>
+ 	<class>lebah.entity.TabUser</class>
+ 	<class>lebah.entity.UserCss</class>
+ 	<class>lebah.entity.UserModule</class>
+ 	<class>lebah.entity.UserModuleTemplate</class>
+ 	<class>lebah.entity.UserRole</class>
+ 	<class>lebah.entity.Users</class>
+ 	<class>lebah.entity.UserTracker</class>
+ 	<class>lebah.entity.WebLogger</class>
+ 	<class>lebah.entity.XMLModule</class>
+ 	
+	<properties>
+	<property name="javax.persistence.jdbc.user" value="sa"/>
+	<property name="javax.persistence.jdbc.password" value=""/>
+	<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
+	<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:data/portaldb"/>
+	<property name="eclipselink.weaving" value="false" />
+	<property name="eclipselink.id-validation" value="NULL"/> 
+	<property name="eclipselink.logging.level" value="OFF"/>
+	<property name="eclipselink.ddl-generation" value="create-tables"/>
+	</properties>
+	
+</persistence-unit>	
+</persistence>

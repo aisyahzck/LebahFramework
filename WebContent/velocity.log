@@ -1,0 +1,948 @@
+2017-03-29 09:31:26,306 - SimpleLog4JLogSystem initialized using logfile '/Users/Admin/Documents/workspace1/lebah4/WebContent/velocity.log'
+2017-03-29 09:31:26,306 - *******************************************************************
+2017-03-29 09:31:26,306 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2017-03-29 09:31:26,306 - RuntimeInstance initializing.
+2017-03-29 09:31:26,306 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2017-03-29 09:31:26,306 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+2017-03-29 09:31:26,306 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogSystem or necessary supporting classes in classpath.
+2017-03-29 09:31:26,308 - java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1284)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1118)
+	... 50 more
+
+2017-03-29 09:31:26,308 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2017-03-29 09:31:26,308 - LogSystem has been deprecated. Please use a LogChute implementation.
+2017-03-29 09:31:26,312 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2017-03-29 09:31:26,317 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:26,318 - FileResourceLoader : initialization starting.
+2017-03-29 09:31:26,318 - Do unicode file recognition:  false
+2017-03-29 09:31:26,318 - FileResourceLoader : adding path '/Users/Admin/Documents/workspace1/lebah4/WebContent'
+2017-03-29 09:31:26,318 - FileResourceLoader : initialization complete.
+2017-03-29 09:31:26,381 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2017-03-29 09:31:26,381 - Default ResourceManager initialization complete.
+2017-03-29 09:31:26,383 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-03-29 09:31:26,384 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-03-29 09:31:26,386 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-03-29 09:31:26,388 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-03-29 09:31:26,389 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-03-29 09:31:26,420 - Created '20' parsers.
+2017-03-29 09:31:26,432 - Velocimacro : initialization starting.
+2017-03-29 09:31:26,432 - Velocimacro : adding VMs from VM library : VM_global_library.vm
+2017-03-29 09:31:26,433 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+2017-03-29 09:31:26,433 - Velocimacro : Velocimacro : Error using VM library : VM_global_library.vm
+2017-03-29 09:31:26,434 - org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:452)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:335)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1102)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1077)
+	at org.apache.velocity.runtime.VelocimacroFactory.initVelocimacro(VelocimacroFactory.java:196)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:251)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-29 09:31:26,434 - Velocimacro : VM library registration complete.
+2017-03-29 09:31:26,434 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-03-29 09:31:26,434 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-03-29 09:31:26,434 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-03-29 09:31:26,434 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-03-29 09:31:26,435 - Velocimacro : Velocimacro : initialization complete.
+2017-03-29 09:31:26,435 - RuntimeInstance successfully initialized.
+2017-03-29 09:31:28,509 - ResourceManager : found vtl/main/title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:28,593 - ResourceManager : found vtl/main/js_css.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:28,596 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:31:28,908 - ResourceManager : found vtl/main/header.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:28,918 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 21, column 1]
+2017-03-29 09:31:28,919 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 22, column 1]
+2017-03-29 09:31:28,953 - ResourceManager : found vtl/main/header_normal.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:28,956 - ResourceManager : found vtl/main/login_input.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:28,962 - ResourceManager : found vtl/main/tab_login.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:29,195 - ResourceManager : found vtl/main/tabber-main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:29,218 - ResourceManager : found vtl/main/tabber2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:29,767 - ResourceManager : found vtl/main/module_title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:29,770 - ResourceManager : found vtl/admin/errormessage.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:29,803 - ResourceManager : found vtl/main/footer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:42,599 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:31:42,864 - ResourceManager : found vtl/main/user_role_tabs_menu.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:42,900 - ResourceManager : found vtl/main/greeting.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:43,251 - ResourceManager : found vtl/main/moduler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:43,265 - ResourceManager : found vtl/main/moduler2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:43,375 - ResourceManager : found vtl/modules/module_edit.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,721 - SimpleLog4JLogSystem initialized using logfile '/Users/Admin/Documents/workspace1/lebah4/WebContent/velocity.log'
+2017-03-29 09:31:47,721 - SimpleLog4JLogSystem initialized using logfile '/Users/Admin/Documents/workspace1/lebah4/WebContent/velocity.log'
+2017-03-29 09:31:47,721 - *******************************************************************
+2017-03-29 09:31:47,721 - *******************************************************************
+2017-03-29 09:31:47,721 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2017-03-29 09:31:47,721 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2017-03-29 09:31:47,721 - RuntimeInstance initializing.
+2017-03-29 09:31:47,721 - RuntimeInstance initializing.
+2017-03-29 09:31:47,721 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2017-03-29 09:31:47,721 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2017-03-29 09:31:47,721 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+2017-03-29 09:31:47,721 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+2017-03-29 09:31:47,721 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogSystem or necessary supporting classes in classpath.
+2017-03-29 09:31:47,721 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogSystem or necessary supporting classes in classpath.
+2017-03-29 09:31:47,722 - java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1284)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1118)
+	... 50 more
+
+2017-03-29 09:31:47,722 - java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1284)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1118)
+	... 50 more
+
+2017-03-29 09:31:47,723 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2017-03-29 09:31:47,723 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2017-03-29 09:31:47,723 - LogSystem has been deprecated. Please use a LogChute implementation.
+2017-03-29 09:31:47,723 - LogSystem has been deprecated. Please use a LogChute implementation.
+2017-03-29 09:31:47,723 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2017-03-29 09:31:47,723 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2017-03-29 09:31:47,723 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,723 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,723 - FileResourceLoader : initialization starting.
+2017-03-29 09:31:47,723 - FileResourceLoader : initialization starting.
+2017-03-29 09:31:47,723 - Do unicode file recognition:  false
+2017-03-29 09:31:47,723 - Do unicode file recognition:  false
+2017-03-29 09:31:47,723 - FileResourceLoader : adding path '/Users/Admin/Documents/workspace1/lebah4/WebContent'
+2017-03-29 09:31:47,723 - FileResourceLoader : adding path '/Users/Admin/Documents/workspace1/lebah4/WebContent'
+2017-03-29 09:31:47,723 - FileResourceLoader : initialization complete.
+2017-03-29 09:31:47,723 - FileResourceLoader : initialization complete.
+2017-03-29 09:31:47,723 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2017-03-29 09:31:47,723 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2017-03-29 09:31:47,723 - Default ResourceManager initialization complete.
+2017-03-29 09:31:47,723 - Default ResourceManager initialization complete.
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-03-29 09:31:47,724 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-03-29 09:31:47,725 - Created '20' parsers.
+2017-03-29 09:31:47,725 - Created '20' parsers.
+2017-03-29 09:31:47,725 - Velocimacro : initialization starting.
+2017-03-29 09:31:47,725 - Velocimacro : initialization starting.
+2017-03-29 09:31:47,725 - Velocimacro : adding VMs from VM library : VM_global_library.vm
+2017-03-29 09:31:47,725 - Velocimacro : adding VMs from VM library : VM_global_library.vm
+2017-03-29 09:31:47,726 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+2017-03-29 09:31:47,726 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+2017-03-29 09:31:47,726 - Velocimacro : Velocimacro : Error using VM library : VM_global_library.vm
+2017-03-29 09:31:47,726 - Velocimacro : Velocimacro : Error using VM library : VM_global_library.vm
+2017-03-29 09:31:47,726 - org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:452)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:335)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1102)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1077)
+	at org.apache.velocity.runtime.VelocimacroFactory.initVelocimacro(VelocimacroFactory.java:196)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:251)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-29 09:31:47,726 - org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:452)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:335)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1102)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1077)
+	at org.apache.velocity.runtime.VelocimacroFactory.initVelocimacro(VelocimacroFactory.java:196)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:251)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-29 09:31:47,727 - Velocimacro : VM library registration complete.
+2017-03-29 09:31:47,727 - Velocimacro : VM library registration complete.
+2017-03-29 09:31:47,727 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-03-29 09:31:47,727 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-03-29 09:31:47,727 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-03-29 09:31:47,727 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-03-29 09:31:47,727 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-03-29 09:31:47,727 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-03-29 09:31:47,727 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-03-29 09:31:47,727 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-03-29 09:31:47,727 - Velocimacro : Velocimacro : initialization complete.
+2017-03-29 09:31:47,727 - Velocimacro : Velocimacro : initialization complete.
+2017-03-29 09:31:47,727 - RuntimeInstance successfully initialized.
+2017-03-29 09:31:47,727 - RuntimeInstance successfully initialized.
+2017-03-29 09:31:47,737 - ResourceManager : found vtl/main/title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,737 - ResourceManager : found vtl/main/title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,767 - ResourceManager : found vtl/main/js_css.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,767 - ResourceManager : found vtl/main/js_css.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,767 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:31:47,767 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:31:47,780 - ResourceManager : found vtl/main/header.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,780 - ResourceManager : found vtl/main/header.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,781 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 21, column 1]
+2017-03-29 09:31:47,781 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 21, column 1]
+2017-03-29 09:31:47,781 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 22, column 1]
+2017-03-29 09:31:47,781 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 22, column 1]
+2017-03-29 09:31:47,786 - ResourceManager : found vtl/main/header_normal.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,786 - ResourceManager : found vtl/main/header_normal.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,789 - ResourceManager : found vtl/main/login_input.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,789 - ResourceManager : found vtl/main/login_input.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,792 - ResourceManager : found vtl/main/tab_login.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,792 - ResourceManager : found vtl/main/tab_login.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,798 - ResourceManager : found vtl/main/tabber-main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,798 - ResourceManager : found vtl/main/tabber-main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,816 - ResourceManager : found vtl/main/tabber2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,816 - ResourceManager : found vtl/main/tabber2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,852 - ResourceManager : found vtl/main/module_title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,852 - ResourceManager : found vtl/main/module_title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,874 - ResourceManager : found vtl/admin/errormessage.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,874 - ResourceManager : found vtl/admin/errormessage.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,877 - ResourceManager : found vtl/main/footer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:31:47,877 - ResourceManager : found vtl/main/footer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:30,982 - SimpleLog4JLogSystem initialized using logfile '/Users/Admin/Documents/workspace1/lebah4/WebContent/velocity.log'
+2017-03-29 09:41:31,002 - *******************************************************************
+2017-03-29 09:41:31,002 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2017-03-29 09:41:31,002 - RuntimeInstance initializing.
+2017-03-29 09:41:31,002 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2017-03-29 09:41:31,002 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+2017-03-29 09:41:31,003 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogSystem or necessary supporting classes in classpath.
+2017-03-29 09:41:31,004 - java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1284)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1118)
+	... 50 more
+
+2017-03-29 09:41:31,004 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2017-03-29 09:41:31,004 - LogSystem has been deprecated. Please use a LogChute implementation.
+2017-03-29 09:41:31,008 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2017-03-29 09:41:31,012 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:31,013 - FileResourceLoader : initialization starting.
+2017-03-29 09:41:31,013 - Do unicode file recognition:  false
+2017-03-29 09:41:31,013 - FileResourceLoader : adding path '/Users/Admin/Documents/workspace1/lebah4/WebContent'
+2017-03-29 09:41:31,013 - FileResourceLoader : initialization complete.
+2017-03-29 09:41:31,042 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2017-03-29 09:41:31,042 - Default ResourceManager initialization complete.
+2017-03-29 09:41:31,043 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-03-29 09:41:31,046 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-03-29 09:41:31,048 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-03-29 09:41:31,049 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-03-29 09:41:31,051 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-03-29 09:41:31,096 - Created '20' parsers.
+2017-03-29 09:41:31,108 - Velocimacro : initialization starting.
+2017-03-29 09:41:31,109 - Velocimacro : adding VMs from VM library : VM_global_library.vm
+2017-03-29 09:41:31,111 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+2017-03-29 09:41:31,111 - Velocimacro : Velocimacro : Error using VM library : VM_global_library.vm
+2017-03-29 09:41:31,112 - org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:452)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:335)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1102)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1077)
+	at org.apache.velocity.runtime.VelocimacroFactory.initVelocimacro(VelocimacroFactory.java:196)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:251)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-29 09:41:31,112 - Velocimacro : VM library registration complete.
+2017-03-29 09:41:31,112 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-03-29 09:41:31,112 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-03-29 09:41:31,112 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-03-29 09:41:31,112 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-03-29 09:41:31,113 - Velocimacro : Velocimacro : initialization complete.
+2017-03-29 09:41:31,113 - RuntimeInstance successfully initialized.
+2017-03-29 09:41:31,210 - ResourceManager : found vtl/main/title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:31,279 - ResourceManager : found vtl/main/js_css.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:31,283 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:41:33,669 - ResourceManager : found vtl/main/header.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:33,700 - ResourceManager : found vtl/main/header_normal.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:33,704 - ResourceManager : found vtl/main/login_input.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:33,710 - ResourceManager : found vtl/main/tab_login.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:33,954 - ResourceManager : found vtl/main/tabber-main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:33,990 - ResourceManager : found vtl/main/tabber2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:34,851 - ResourceManager : found vtl/main/module_title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:35,045 - ResourceManager : found vtl/ajax/ajax_main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:35,118 - ResourceManager : found vtl/action/ajax/main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:35,124 - ResourceManager : found vtl/action/ajax/messages.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:35,143 - ResourceManager : found landingPage/start.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:35,189 - ResourceManager : found vtl/main/footer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:39,591 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:41:39,809 - ResourceManager : found vtl/main/user_role_tabs_menu.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:39,855 - ResourceManager : found vtl/main/greeting.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:40,031 - ResourceManager : found vtl/main/moduler.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:40,047 - ResourceManager : found vtl/main/moduler2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:40,136 - ResourceManager : found vtl/modules/module_edit.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:47,385 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:41:51,557 - SimpleLog4JLogSystem initialized using logfile '/Users/Admin/Documents/workspace1/lebah4/WebContent/velocity.log'
+2017-03-29 09:41:51,557 - SimpleLog4JLogSystem initialized using logfile '/Users/Admin/Documents/workspace1/lebah4/WebContent/velocity.log'
+2017-03-29 09:41:51,557 - *******************************************************************
+2017-03-29 09:41:51,557 - *******************************************************************
+2017-03-29 09:41:51,558 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2017-03-29 09:41:51,558 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2017-03-29 09:41:51,558 - RuntimeInstance initializing.
+2017-03-29 09:41:51,558 - RuntimeInstance initializing.
+2017-03-29 09:41:51,558 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2017-03-29 09:41:51,558 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2017-03-29 09:41:51,558 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+2017-03-29 09:41:51,558 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+2017-03-29 09:41:51,558 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogSystem or necessary supporting classes in classpath.
+2017-03-29 09:41:51,558 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogSystem or necessary supporting classes in classpath.
+2017-03-29 09:41:51,560 - java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1284)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1118)
+	... 50 more
+
+2017-03-29 09:41:51,560 - java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1284)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1118)
+	... 50 more
+
+2017-03-29 09:41:51,560 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2017-03-29 09:41:51,560 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
+2017-03-29 09:41:51,560 - LogSystem has been deprecated. Please use a LogChute implementation.
+2017-03-29 09:41:51,560 - LogSystem has been deprecated. Please use a LogChute implementation.
+2017-03-29 09:41:51,560 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2017-03-29 09:41:51,560 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2017-03-29 09:41:51,560 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,560 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,560 - FileResourceLoader : initialization starting.
+2017-03-29 09:41:51,560 - FileResourceLoader : initialization starting.
+2017-03-29 09:41:51,560 - Do unicode file recognition:  false
+2017-03-29 09:41:51,560 - Do unicode file recognition:  false
+2017-03-29 09:41:51,560 - FileResourceLoader : adding path '/Users/Admin/Documents/workspace1/lebah4/WebContent'
+2017-03-29 09:41:51,560 - FileResourceLoader : adding path '/Users/Admin/Documents/workspace1/lebah4/WebContent'
+2017-03-29 09:41:51,560 - FileResourceLoader : initialization complete.
+2017-03-29 09:41:51,560 - FileResourceLoader : initialization complete.
+2017-03-29 09:41:51,560 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2017-03-29 09:41:51,560 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2017-03-29 09:41:51,561 - Default ResourceManager initialization complete.
+2017-03-29 09:41:51,561 - Default ResourceManager initialization complete.
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-03-29 09:41:51,561 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-03-29 09:41:51,562 - Created '20' parsers.
+2017-03-29 09:41:51,562 - Created '20' parsers.
+2017-03-29 09:41:51,563 - Velocimacro : initialization starting.
+2017-03-29 09:41:51,563 - Velocimacro : initialization starting.
+2017-03-29 09:41:51,563 - Velocimacro : adding VMs from VM library : VM_global_library.vm
+2017-03-29 09:41:51,563 - Velocimacro : adding VMs from VM library : VM_global_library.vm
+2017-03-29 09:41:51,563 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+2017-03-29 09:41:51,563 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+2017-03-29 09:41:51,563 - Velocimacro : Velocimacro : Error using VM library : VM_global_library.vm
+2017-03-29 09:41:51,563 - Velocimacro : Velocimacro : Error using VM library : VM_global_library.vm
+2017-03-29 09:41:51,564 - org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:452)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:335)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1102)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1077)
+	at org.apache.velocity.runtime.VelocimacroFactory.initVelocimacro(VelocimacroFactory.java:196)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:251)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-29 09:41:51,564 - org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:452)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:335)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1102)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1077)
+	at org.apache.velocity.runtime.VelocimacroFactory.initVelocimacro(VelocimacroFactory.java:196)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:251)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.init(VelocityEngine.java:144)
+	at lebah.portal.velocity.VServlet.initVelocity(VServlet.java:62)
+	at lebah.portal.DesktopController.doBody(DesktopController.java:83)
+	at lebah.portal.DesktopController.doPost(DesktopController.java:53)
+	at lebah.portal.DesktopController.doGet(DesktopController.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:726)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:469)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:394)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:311)
+	at lebah.portal.handler.DesktopHandler.process(DesktopHandler.java:38)
+	at lebah.portal.InterceptorServlet.service(InterceptorServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:522)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:620)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:1110)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:785)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1425)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-29 09:41:51,564 - Velocimacro : VM library registration complete.
+2017-03-29 09:41:51,564 - Velocimacro : VM library registration complete.
+2017-03-29 09:41:51,565 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-03-29 09:41:51,565 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-03-29 09:41:51,565 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-03-29 09:41:51,565 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-03-29 09:41:51,565 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-03-29 09:41:51,565 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-03-29 09:41:51,565 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-03-29 09:41:51,565 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-03-29 09:41:51,565 - Velocimacro : Velocimacro : initialization complete.
+2017-03-29 09:41:51,565 - Velocimacro : Velocimacro : initialization complete.
+2017-03-29 09:41:51,565 - RuntimeInstance successfully initialized.
+2017-03-29 09:41:51,565 - RuntimeInstance successfully initialized.
+2017-03-29 09:41:51,584 - ResourceManager : found vtl/main/title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,584 - ResourceManager : found vtl/main/title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,601 - ResourceManager : found vtl/main/js_css.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,601 - ResourceManager : found vtl/main/js_css.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,601 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:41:51,601 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:41:51,613 - ResourceManager : found vtl/main/header.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,613 - ResourceManager : found vtl/main/header.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,615 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 21, column 1]
+2017-03-29 09:41:51,615 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 21, column 1]
+2017-03-29 09:41:51,616 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 22, column 1]
+2017-03-29 09:41:51,616 - RHS of #set statement is null. Context will not be modified. vtl/main/header.vm [line 22, column 1]
+2017-03-29 09:41:51,619 - ResourceManager : found vtl/main/header_normal.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,619 - ResourceManager : found vtl/main/header_normal.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,621 - ResourceManager : found vtl/main/login_input.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,621 - ResourceManager : found vtl/main/login_input.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,623 - ResourceManager : found vtl/main/tab_login.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,623 - ResourceManager : found vtl/main/tab_login.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,627 - ResourceManager : found vtl/main/tabber-main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,627 - ResourceManager : found vtl/main/tabber-main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,642 - ResourceManager : found vtl/main/tabber2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,642 - ResourceManager : found vtl/main/tabber2.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,746 - ResourceManager : found vtl/main/module_title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,746 - ResourceManager : found vtl/main/module_title.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,818 - ResourceManager : found vtl/ajax/ajax_main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,818 - ResourceManager : found vtl/ajax/ajax_main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,868 - ResourceManager : found vtl/action/ajax/main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,868 - ResourceManager : found vtl/action/ajax/main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,872 - ResourceManager : found vtl/action/ajax/messages.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,872 - ResourceManager : found vtl/action/ajax/messages.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,875 - ResourceManager : found landingPage/start.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,875 - ResourceManager : found landingPage/start.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,878 - ResourceManager : found vtl/main/footer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:41:51,878 - ResourceManager : found vtl/main/footer.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2017-03-29 09:59:56,722 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 09:59:56,722 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 10:00:04,086 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
+2017-03-29 10:00:04,086 - Null reference [template 'vtl/main/js_css.vm', line 41, column 5] : $j cannot be resolved.
