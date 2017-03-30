@@ -1,7 +1,7 @@
 # LebahFramework
 Light and Easy Business Architecture (LeBAH)
 
-This is a Java based web-application framework.  You can use this framework to develop a web application.  This framework comes with pre-setup portal's data where you can right away open it in the web browser, but first you need to open this as an Eclipse project.
+This is a Java based web-application framework.  You can use this framework to develop a web application.  This framework comes with pre-setup portal's data where you can right away open it in the web browser, but first you need to open this as an Eclipse project.  In the ant folder, you shall find the ant build.xml file, where you can use to create a war file to be deployed into your Tomcat server.
 
 This repository contains the full source code of the LeBAH framework. I've started developing this framework since 2005 (about more than 10 years ago, when I was very new with the Java language itself.. so please expect the source codes are not that good..(a smiley face)...)
 
