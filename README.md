@@ -15,8 +15,9 @@ Replace the "/Users/Admin/Documents/workspace1/lebah4/" to the location of where
 
 url=jdbc:derby:c:/MyData/derby/db;create=true
 
+UPDATE:
+There is a serious update on the Velocity Engine initiator in the class VServlet.  This time, a Singleton Velocity Engine is used and being created by the VelocityEngineHolder class.
 
-I will update this README again...
 
 Thank You.<br/>
 Shamsul Bahrin b Abd Mutalib
