@@ -55,7 +55,7 @@ public class DivControllerServlet  extends VServlet  {
 	private void doService(HttpServletRequest req, HttpServletResponse res, PrintWriter out, HttpSession session)
 			throws ServletException {
 		
-		synchronized(this) {
+		//synchronized(this) {
 			context = (org.apache.velocity.VelocityContext) session.getAttribute("VELOCITY_CONTEXT");
 			engine = (org.apache.velocity.app.VelocityEngine) session.getAttribute("VELOCITY_ENGINE");
 			if ( context == null ) {
@@ -63,7 +63,7 @@ public class DivControllerServlet  extends VServlet  {
 				session.setAttribute("VELOCITY_CONTEXT", context);
 				session.setAttribute("VELOCITY_ENGINE", engine);
 			}
-		}
+		//}
 
 
         String app_path = getServletContext().getRealPath("/");
