@@ -29,6 +29,8 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
@@ -45,6 +47,7 @@ public abstract class VServlet extends HttpServlet {
 	
     public void init( ServletConfig config ) throws ServletException {
         super.init(config);
+        
     }
     
     /*
@@ -55,6 +58,7 @@ public abstract class VServlet extends HttpServlet {
         try { 
         	engine = VelocityEngineHolder.getInstance(config, getServletContext()).getVelocityEngine();
         	context = new VelocityContext();
+        	context.put("request_uid", lebah.util.UIDGenerator.getUID());
         } catch ( Exception e ) {
         	System.out.println("ERROR IN VELOCITYSERVLET INITVELOCITY");
 	        e.printStackTrace();
