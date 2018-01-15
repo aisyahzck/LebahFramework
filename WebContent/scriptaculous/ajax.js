@@ -45,7 +45,7 @@ function doAjaxUpdater(objForm, url, target, actionName) {
 	   if ( id == '' ) theForm.elements[i].id = name;
        name = theForm.elements[i].name;
 	   var value = theForm.elements[i].value;
-       pars = pars + '&' + name + '=' + escape(value);
+       pars = pars + '&' + name + '=' + encodeURIComponent(value);
 	}
 	var result;
     var myAjax = new Ajax.Updater(target, url, {
@@ -90,10 +90,13 @@ function doAjaxUpdater(objForm, url, target, actionName, qs) {
 		   if ( id == "" ) theForm.elements[i].id = name;
 	       name = theForm.elements[i].name;
 		   var value = theForm.elements[i].value;
-	       pars = pars + '&' + name + '=' + escape(value);
+	       pars = pars + '&' + name + '=' + encodeURIComponent(value);
        }
 	}
 	pars = pars + '&' + qs;
+	
+	console.log(pars);
+	
     var myAjax = new Ajax.Updater(target, url, {
     											method: 'post', 
     											parameters: pars,
@@ -108,7 +111,7 @@ function doAjaxUpdater(objForm, url, target, actionName, qs) {
 									            onFailure: function(t) {
 													alert('failure get response');
 									            }     											
-    											});		 
+    									});		 
 }
 
 function doAjaxUpdaterByParamName(objForm, url, target, actionName, qs, paramName) {
@@ -136,9 +139,9 @@ function doAjaxUpdaterByParamName(objForm, url, target, actionName, qs, paramNam
 	       name = theForm.elements[i].name;
 		   var value = theForm.elements[i].value;
 		   if ( name == "command")
-			   pars = pars + '&' + name + '=' + escape(value);
+			   pars = pars + '&' + name + '=' + encodeURIComponent(value);
 		   if ( name == paramName )
-			   pars = pars + '&' + name + '=' + escape(value);
+			   pars = pars + '&' + name + '=' + encodeURIComponent(value);
 	       
        }
 	}
@@ -157,7 +160,8 @@ function doAjaxUpdaterByParamName(objForm, url, target, actionName, qs, paramNam
 									            onFailure: function(t) {
 													alert('failure get response');
 									            }     											
-    											});		 
+    											});	
+    	 
 }
 
 
@@ -185,7 +189,7 @@ function doAjaxUpdaterChain(objForm, url, target, actionName, qs, target2, actio
 		   if ( id == '' ) theForm.elements[i].id = name;
 	       name = theForm.elements[i].name;
 		   var value = theForm.elements[i].value;
-	       pars = pars + '&' + name + '=' + escape(value);
+	       pars = pars + '&' + name + '=' + encodeURIComponent(value);
        }
 	}
 	pars = pars + '&' + qs;
