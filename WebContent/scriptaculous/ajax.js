@@ -49,19 +49,19 @@ function doAjaxUpdater(objForm, url, target, actionName) {
 	}
 	var result;
     var myAjax = new Ajax.Updater(target, url, {
-    							  				method: 'post', 
-    							  				parameters: pars,
-    							  				evalScripts: true,
-    							  				onComplete: function(t) {
-    							  				  	result = t.responseText;
-            									},
-									            on404: function(t) {
-													alert('error 404');
-									            },
-									            onFailure: function(t) {
-													alert('failure get response');
-									            } 
-    							  				});		 
+    	method: 'post', 
+    	parameters: pars,
+    	evalScripts: true,
+    	onComplete: function(t) {
+    	result = t.responseText;
+        },
+		on404: function(t) {
+		alert('error 404');
+		},
+		onFailure: function(t) {
+		alert('failure get response');
+		} 
+    });		 
 }
 
 
